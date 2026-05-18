@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Press On, Preston</title>
+  <meta name="description" content="A quiet place for updates, prayer requests, and ways to support Preston through treatment and recovery." />
+
+  <style>
+    :root {
+      --bg: #f8f5ef;
+      --paper: #fffdf8;
+      --ink: #2f2a24;
+      --muted: #746b60;
+      --line: #e4ddd2;
+      --accent: #7a8b6f;
+      --accent-dark: #59674f;
+      --soft: #efe8dc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+
+    header {
+      text-align: center;
+      padding: 54px 18px 36px;
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 7vw, 4.8rem);
+      line-height: 1.05;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .subtitle {
+      max-width: 650px;
+      margin: 20px auto 0;
+      color: var(--muted);
+      font-size: 1.18rem;
+    }
+
+    .hero-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: clamp(24px, 5vw, 46px);
+      box-shadow: 0 18px 50px rgba(63, 52, 39, 0.06);
+    }
+
+    .photo-placeholder {
+      border-radius: 20px;
+      background: linear-gradient(135deg, #ede4d7, #faf7ef);
+      border: 1px dashed #c9beae;
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--muted);
+      padding: 24px;
+      margin-bottom: 32px;
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .hero-photo {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 32px;
+      max-height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+
+    h2 {
+      font-size: clamp(1.55rem, 4vw, 2.2rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin: 0 0 14px;
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
+    .section {
+      margin-top: 26px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: clamp(22px, 4vw, 36px);
+    }
+
+    .quiet-note {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+      border: 1px solid var(--accent);
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--accent-dark);
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .support-box {
+      background: #fbf8f1;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .support-box h3 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      font-weight: 400;
+    }
+
+    .support-box p {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .direct-list {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+      font-family: Arial, sans-serif;
+      color: var(--ink);
+      font-size: 0.95rem;
+    }
+
+    .direct-list li {
+      padding: 8px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .scripture {
+      background: var(--soft);
+      border: none;
+      text-align: center;
+      font-size: 1.15rem;
+    }
+
+    .scripture span {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      margin-top: 34px;
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: 720px) {
+      header {
+        padding-top: 36px;
+      }
+
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .button {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="eyebrow">Faith • Family • Hope</div>
+      <h1>Press On, Preston</h1>
+      <p class="subtitle">A quiet place for updates, prayer requests, and ways to support Preston through treatment and recovery.</p>
+    </header>
+
+    <section class="hero-card">
+      <img 
+        class="hero-photo"
+        src="preston-family.jpg"
+        alt="Preston with family"
+      />
+
+      <h2>Walking with Preston</h2>
+      <p>
+        Preston is facing a difficult cancer diagnosis and a long road of treatment and recovery. This page was created as a simple place for family and friends to stay updated, pray with us, and support him in practical ways.
+      </p>
+      <p>
+        We are deeply grateful for every prayer, message, meal, gift, and act of kindness. 
+      </p>
+
+      <div class="actions">
+        <a class="button primary" href="https://www.gofundme.com/f/help-preston-fight-cancer-and-cover-medical-costs" target="_blank" rel="noopener">Support through GoFundMe</a>
+        <a class="button secondary" href="#direct-support">Other ways to help</a>
+      </div>
+    </section>
+
+    <section class="section" id="updates">
+      <h2>Updates</h2>
+      <p class="quiet-note">
+        We will use this section for simple updates as treatment moves forward.
+      </p>
+      <p>
+        <strong>Latest update:</strong> Thank you for praying and walking with Preston. More updates will be shared here as we have them.
+      </p>
+    </section>
+
+    <section class="section" id="direct-support">
+      <h2>Ways to support</h2>
+      <p>
+        The GoFundMe is the easiest public way to help, but we understand that some people prefer to give directly because of platform fees or personal preference. Either way, the support means more than we can say.
+      </p>
+
+      <div class="support-grid">
+        <div class="support-box">
+          <h3>GoFundMe</h3>
+          <p>For those who prefer the public fundraiser, donations can be made through the GoFundMe page.</p>
+          <a class="button primary" href="https://www.gofundme.com/f/help-preston-fight-cancer-and-cover-medical-costs" target="_blank" rel="noopener">Open GoFundMe</a>
+        </div>
+
+        <div class="support-box">
+          <h3>Direct support</h3>
+          <p>For anyone who would rather give directly, we will list the preferred options here once confirmed by the family.</p>
+          <ul class="direct-list">
+            <li>Venmo: <strong>@Preston-Weeks-2</strong></li>
+            <li>Cash App: <strong>$pdubya18</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="quiet-note" style="margin-top: 20px;">
+        Please only use the direct giving information listed on this page or shared directly by immediate family.
+      </p>
+    </section>
+
+    <section class="section scripture">
+      “Forgetting what lies behind and straining forward to what lies ahead, I press on toward the goal.”
+      <span>Philippians 3:13–14</span>
+    </section>
+
+    <section class="section">
+      <h2>Prayer requests</h2>
+      <p>
+        Please pray for peace, strength, wisdom for the doctors, protection through treatment, and comfort for Preston and everyone walking closely with him.
+      </p>
+    </section>
+
+    <footer>
+      Press On, Preston • Thank you for loving and supporting him.
+    </footer>
+  </main>
+</body>
+</html>
